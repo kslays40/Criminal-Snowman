@@ -1,12 +1,13 @@
-import 'package:acejoker/HomePage.dart';
 import 'package:acejoker/LoginScreen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MyApp());
 }
 
@@ -17,8 +18,9 @@ class MyApp extends StatelessWidget {
       title: "SnowMan",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF94cedb)),
-          fontFamily: 'SfPro'
+        primarySwatch: Colors.yellow,
+        fontFamily: 'SfPro',
+        brightness: Brightness.dark,
       ),
       home: Loginscreen(),
     );
